@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .crystal{
+        height: 200px;
+        border: 200 px;
+        border-color: blue;
+    }
+   
+</style>
+<body>
+    <div class="crystals"></div>
+    
+<script>
+    var targetNumber;
+    var wins = 0;
+    var losses = 0;
+
+    for(var i = 0; i < 4; i++){
+        var crystal = $("<div>");
+            crystal.attr("class", 'crystal');
+
+        $(".crystals").append(crystal);
+    }
+    
+    
+    </script>
+</body>
+</html>
