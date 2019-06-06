@@ -1,4 +1,4 @@
-var targetNumber = 0;
+var targetNumber;
 
 $("#number-to-guess").text(targetNumber);
 
@@ -6,29 +6,31 @@ var counter = 0;
 
 // Now for the hard part. Creating multiple crystals each with their own unique number value.
 
-// We begin by expanding our array to include four *tweleve*  options.
+// We begin by expanding our array to include four options.
 var numberOptions = [1, 2, 3, 4,];
 var images = ["assets/images/Crystal_1.jpg", "assets/images/Crystal_2.jpg", "assets/images/Crystal_3.jpg", "assets/images/Crystal_4.jpg"];
 
 // Next we create a for loop to create crystals for every numberOption.
-for (var i = 0; i < numberOptions.length ; i++) {
-
+for (var i = 0; i < images.length ; i++) {
+  console.log(images[i]);
+var rndValue = Math.random(Math.floor)
   // For each iteration, we will create an imageCrystal
-  var images = $("<img>");
+  var crystalImage = $("<img>");
 
   // First each crystal will be given the class ".crystal-image".
   // This will allow the CSS to take effect.
-  images.addClass("crystal-image");
+  crystalImage.addClass("crystal-image");
 
   // Each imageCrystal will be given a src link to the crystal image
-//   imageCrystal.attr("src", "https://cdn.shopify.com/s/files/1/0196/8154/products/Healing_Amethyst_2_1024x1024.jpg?v=1490125036");
+  crystalImage.attr("src", images[i]);
 
   // Each imageCrystal will be given a data attribute called data-crystalValue.
   // This data attribute will be set equal to the array value.
-  images.attr("data-crystalvalue", numberOptions[i]);
+  crystalImage.attr("data-crystalvalue", rndValue);
+  
 
   // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-  $("#crystals").append(images);
+  $("#crystals").append(crystalImage);
 }
 
 // This time, our click event applies to every single crystal on the page. Not just one.
