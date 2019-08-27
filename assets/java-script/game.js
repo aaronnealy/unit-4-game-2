@@ -68,7 +68,7 @@ $(".crystal-image").on("click", function() {
     counter = 0;
     $(".wins").html("Wins: " + win)
 
-    //here I would need a condition to reset the targetNumber and the crystal values 
+    assignValues()
   }
 
   else if (counter >= targetNumber) {
@@ -76,7 +76,7 @@ $(".crystal-image").on("click", function() {
     counter = 0;
     $(".losses").html("Losses: " + losses)
     
-    
+    assignValues()
   }
 
 });
